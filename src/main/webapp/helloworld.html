@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>helloWorld</title>
+    <script>
+        window.onload = function() {
+            var btn= document.getElementsByTagName("button")[0];
+            btn.onclick =function () {
+                alert("helloworld");
+            }
+
+            var liNodes = document.getElementsByTagName("li");
+            for(var i =0;i<liNodes.length;i++){
+                liNodes[i].onclick=function () {
+                    alert(this.firstChild.nodeValue);
+                }
+            }
+            
+        }
+    </script>
+</head>
+<body>
+<button>click me</button>
+
+<li>beijing</li>
+<li>shouer</li>
+<li>newyork</li>
+<li>dongjing</li>
+
+</body>
+</html>
